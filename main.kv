@@ -1,0 +1,33 @@
+#: import utils kivy.utils
+ScreenManager:
+    HomeScreen:
+        id: home
+        name: 'home'
+
+
+<HomeScreen>:
+    canvas:
+        Color:
+            rgb: utils.get_color_from_hex('#aceace')
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    FloatLayout:
+        Label:
+            text: "Your IP Address is:"
+            font_size:35
+            pos_hint: {'top':.7,'left':1}
+            size_hint: 1,.1
+            color: 0,0,0,1
+        Label:
+            text: app.IP
+            font_size:25
+            pos_hint: {'top':.6,'left':1}
+            size_hint: 1,.1
+            color: 1,0,0,1
+        Label:
+            text: 'Computer name: ' + app.compname
+            font_size:20
+            pos_hint: {'top':.5,'left':1}
+            size_hint: 1,.1
+            color: 0,0,1,1
